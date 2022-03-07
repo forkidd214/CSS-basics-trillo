@@ -17,14 +17,17 @@
     <div class="container">
         <header class="header">
             <img src="img/logo.png" alt="Trillo logo" class="logo">
-            <form action="#" class="search">
-                <input type="text" class="search__input" placeholder="Search hotels">
+
+
+            <form action="#" class="search autocomplete" autocomplete="off">
+                <input type="text" class="search__input" placeholder="Search hotels" id="myInput">
                 <button class="search__button">
                     <svg class="search__icon">
                         <use href="img/sprite.svg#icon-magnifying-glass"></use>
                     </svg>
                 </button>
             </form>
+
             <nav class="user-nav">
                 <div class="user-nav__icon-box">
                     <svg class="user-nav__icon">
@@ -40,7 +43,34 @@
                 </div>
                 <div class="user-nav__user">
                     <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
-                    <span class="user-nav__user-name">Jonas</span>
+                    <span class="user-nav__user-name">Jason</span>
+
+                    <ul class="user-nav__user-dropdown">
+                        <li class="user-nav__user-dropdown-item">
+                            <a class="user-nav__user-dropdown-link" href="#">
+                                <svg class="user-nav__user-dropdown-icon">
+                                    <use href="img/sprite.svg#icon-bookmark"></use>
+                                </svg>
+                                <span class="user-nav__user-dropdown-text">My Bookings</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__user-dropdown-item">
+                            <a class="user-nav__user-dropdown-link" href="#">
+                                <svg class="user-nav__user-dropdown-icon">
+                                    <use href="img/sprite.svg#icon-star"></use>
+                                </svg>
+                                <span class="user-nav__user-dropdown-text">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="user-nav__user-dropdown-item">
+                            <a class="user-nav__user-dropdown-link" href="#">
+                                <svg class="user-nav__user-dropdown-icon">
+                                    <use href="img/sprite.svg#icon-key"></use>
+                                </svg>
+                                <span class="user-nav__user-dropdown-text">Log out</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -91,12 +121,15 @@
                 <div class="gallery">
                     <figure class="gallery__item">
                         <img class="gallery__photo" src="img/hotel-1.jpg" alt="Photo of hotel 1">
+                        <figcaption class="gallery__caption">Ambiguous night</figcaption>
                     </figure>
                     <figure class="gallery__item">
                         <img class="gallery__photo" src="img/hotel-2.jpg" alt="Photo of hotel 2">
+                        <figcaption class="gallery__caption">Hot spring pool</figcaption>
                     </figure>
                     <figure class="gallery__item">
                         <img class="gallery__photo" src="img/hotel-3.jpg" alt="Photo of hotel 3">
+                        <figcaption class="gallery__caption">Amazing view</figcaption>
                     </figure>
                 </div>
 
@@ -200,6 +233,8 @@
             </main>
         </div>
     </div>
+
+    <script src="js/autocomplete.js"></script>
 </body>
 
 </html>
